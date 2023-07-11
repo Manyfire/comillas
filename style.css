@@ -1,5 +1,11 @@
+.mi-ejercicio{
+    border: 3px solid;
+    padding: 10px 7px;
+    background-color: gainsboro;
+}
+
 img{
-   width: 50%;
+   width: 20%;
    border-radius: 15px;
    padding: 8px ;
    margin: 10px;
@@ -38,11 +44,40 @@ img{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* //shopping */
 .contenido {
     margin: 10px;
     border: none ;
     background-color: bisque;
     padding: 10px;
     border-radius: 15px;
+}
+/* //shopping */
+.jab-ejercice{
+    border: 3px solid blue;
+    padding: 20px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.jab-ejercice img{
+    width: 20%;
+}
+
+.jab-ejercice div {
+    font-size: 1.5em;
+}
+
+.nom-client {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    width: 200px;
+    margin:  0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    background-color: rgb(243, 174, 26);
 }

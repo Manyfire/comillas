@@ -40,6 +40,16 @@
 // }
 //=================================
 window.onload= incio ;
+document.querySelector("body").insertAdjacentHTML('beforeend',`<section class="mi-ejercicio">
+    <h1>Mi ejercicio</h1>
+    <div>
+      <input type="text" placeholder="usuario Name:" id="nombre">
+      <input type="number" placeholder="password" id="password">
+      <button class="boton">Click</button>
+    </div>
+    <div class="contenido"></div>
+  </section>
+  `);
 
 function incio(){
   document.querySelector('.boton').onclick= action2;  
@@ -53,7 +63,7 @@ function incio(){
       document.querySelector('.contenido').insertAdjacentHTML("beforeend",`
       <div class="contenido">
         <div>
-          <img src="img/gorra.jpg"/>
+          <img src="img/img2/gorra.jpg"/>
         </div>
       </div>
       `)
@@ -62,7 +72,7 @@ function incio(){
       document.querySelector('.contenido').insertAdjacentHTML("beforeend",`
       <div >
         <div>
-          <img src="img/short.jpg"/>
+          <img src="img/img2/short.jpg"/>
         </div>
       </div>`)
     }
@@ -70,4 +80,51 @@ function incio(){
       alert('estas haciendolo mal')
     }
   }
+//======================================
+//JAB SHOPPING
+let usuario = 'John Smith';
+let productAcheter = 1; //<==depende si utilisamo el 'array 0' o el 'array 1'
+const DISCOUNT = 0.1;
+
+let prixDiscount; //<==sera una fuction (restandolo del prix 1 o prix 2 - discount)
+const PRODUCT = [
+  {
+    product: 'Pantalon',
+    prix: 10,
+    talla: 'm',
+    imgage: 'short.jpg'
+  },
+  {
+    product: 'Casquette',
+    prix: 5,
+    talla: 's',
+    imgage:'gorra.jpg'
+  }
+]
+//----------------
+document.querySelector('body').insertAdjacentHTML("beforeend",`
+<h1 class="nom-client">${usuario}</h1>
+<section class="jab-ejercice">
+  <div>
+  ${PRODUCT[productAcheter].product} =
+  ${PRODUCT[productAcheter].prix}$
+</div>
+<div>Prix descount = ${calculoDiscount()}$</div>
+<div>
+  <strong>
+    Prix Total: ${calculoPrixFinal()} $
+  </strong>
+</div>
+<div>talla: ${PRODUCT[productAcheter].talla.toUpperCase()}</div>
+<img src="/img/img2/${PRODUCT[productAcheter].imgage}" />
+</section>`);
+
+function calculoDiscount(){
+  prixDiscount =PRODUCT[productAcheter].prix * DISCOUNT;
+  return prixDiscount;
+};
+
+function calculoPrixFinal(){
+  return PRODUCT[productAcheter].prix - prixDiscount;
+}
 
